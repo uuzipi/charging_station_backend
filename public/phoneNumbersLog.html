@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Numbers Log</title>
+    <link rel="stylesheet" href="styles/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- 侧边栏 -->
+        <div class="w-48 bg-white shadow-lg">
+            <div class="p-4 border-b border-gray-200">
+                <h1 class="text-xl font-bold text-gray-800">管理系统</h1>
+            </div>
+            <nav class="mt-4 px-2">
+                <div class="space-y-2">
+                    <a href="admin.html" class="sidebar-link block">
+                        <span class="mdi mdi-home text-xl"></span>
+                        <span class="ml-3">主页</span>
+                    </a>
+                    <a href="balance.html" class="sidebar-link block">
+                        <span class="mdi mdi-wallet text-xl"></span>
+                        <span class="ml-3">余额管理</span>
+                    </a>
+                    <a href="charging.html" class="sidebar-link block">
+                        <span class="mdi mdi-battery-charging text-xl"></span>
+                        <span class="ml-3">继电器管理</span>
+                    </a>
+                    <a href="Controlcentre.html" class="sidebar-link block">
+                        <span class="mdi mdi-cog-transfer text-xl"></span>  <!-- 带齿轮的控制台图标 -->
+                        <span class="ml-3">调控中心</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-link block">
+                        <span class="mdi mdi-cash-register text-xl"></span>
+                        <span class="ml-3">订单管理</span>
+                    </a>
+                    <a href="phoneNumbersLog.html" class="sidebar-link block active">
+                        <span class="mdi mdi-file-document-outline text-xl"></span>
+                        <span class="ml-3">日志</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 主要内容区 -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">日志</h2>
+            </div>
+
+            <div class="card">
+                <ul id="log-list" class="list-disc pl-5">
+                    <!-- 动态插入日志项 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/pages/logs.js"></script>
+</body>
+</html> 

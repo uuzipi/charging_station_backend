@@ -1,0 +1,53 @@
+.navbar .main-navbar .main-navbar-links .main-navbar-item {
+    display: inline-block;
+    padding: 0 3%;
+    position: relative;
+}
+
+.navbar .main-navbar .main-navbar-links .main-navbar-item.active a {
+    color: #42b983;
+}
+
+.navbar .main-navbar .main-navbar-links .main-navbar-item.active a:after {
+    opacity: 1;
+    transform: scaleX(1);
+    color: #42b983;
+}
+
+.navbar .main-navbar .main-navbar-links .main-navbar-item>a,
+.navbar .main-navbar .main-navbar-links .main-navbar-item>div>a {
+    color: inherit;
+}
+
+.navbar .main-navbar .main-navbar-links .main-navbar-item>a:hover,
+.navbar .main-navbar .main-navbar-links .main-navbar-item>div>a:hover {
+    color: #42b983;
+}
+
+.navbar .main-navbar .main-navbar-links .main-navbar-item>a:after,
+.navbar .main-navbar .main-navbar-links .main-navbar-item>div>a:after {
+    content: "";
+    transition: all .2s cubic-bezier(.18,.89,.17,.88),opacity .15s ease;
+    width: 46px;
+    height: 2px;
+    background-color: #42b983;
+    position: absolute;
+    left: 50%;
+    margin-left: -23px;
+    bottom: 0;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.navbar .main-navbar .main-navbar-links {
+    width: 50%;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@media (min-width: 1080px) and (max-width:1680px) {
+    .navbar .main-navbar .main-navbar-links {
+        flex:1;
+        padding: 0 300px;
+    }
+} 

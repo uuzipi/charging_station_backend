@@ -1,0 +1,51 @@
+/* 标签页样式 start */
+.tab {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tab button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+/* 标签页样式 end */
+
+/* 余额容器样式 start */
+.balance-container, .user-balance-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.balance-amount {
+    font-size: 36px;
+    color: #333;
+    margin: 20px 0;
+}
+/* 余额容器样式 end */
+
+/* 刷新按钮样式 start */
+.refresh-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.refresh-btn:hover {
+    background: #0056b3;
+}
+/* 刷新按钮样式 end */ 

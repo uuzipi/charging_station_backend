@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh" class="dark-transition">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理系统</title>
+    <link rel="stylesheet" href="styles/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 dark-transition">
+    <div class="min-h-screen flex">
+        <!-- 侧边栏 -->
+        <div class="w-48 bg-white dark:bg-gray-800 shadow-lg transition-all duration-300">
+            <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+                <h1 class="text-xl font-bold text-gray-800 dark:text-white">管理系统</h1>
+            </div>
+            <nav class="mt-4 px-2">
+                <div class="space-y-2">
+                    <a href="admin.html" class="sidebar-link block">
+                        <span class="mdi mdi-home text-xl"></span>
+                        <span class="ml-3">主页</span>
+                    </a>
+                    <a href="balance.html" class="sidebar-link block">
+                        <span class="mdi mdi-wallet text-xl"></span>
+                        <span class="ml-3">余额管理</span>
+                    </a>
+                    <a href="charging.html" class="sidebar-link block">
+                        <span class="mdi mdi-battery-charging text-xl"></span>
+                        <span class="ml-3">继电器管理</span>
+                    </a>
+                    <a href="Controlcentre.html" class="sidebar-link block">
+                        <span class="mdi mdi-cog-transfer text-xl"></span>  <!-- 带齿轮的控制台图标 -->
+                        <span class="ml-3">调控中心</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-link block">
+                        <span class="mdi mdi-cash-register text-xl"></span>
+                        <span class="ml-3">订单管理</span>
+                    </a>
+                    <a href="phoneNumbersLog.html" class="sidebar-link block">
+                        <span class="mdi mdi-file-document-outline text-xl"></span>
+                        <span class="ml-3">日志</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 主要内容区 -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">欢迎使用管理系统</h2>
+                <!-- <button id="darkModeToggle" class="btn">
+                    <span class="mdi mdi-weather-night dark:hidden"></span>
+                    <span class="mdi mdi-weather-sunny hidden dark:inline"></span>
+                </button> -->
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card animate-fade-in">
+                    <span class="mdi mdi-wallet text-4xl text-primary-light dark:text-primary-dark mb-4"></span>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">余额管理</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">管理用户的余额信息，查看交易记录。</p>
+                    <a href="balance.html" class="btn-primary inline-block">
+                        查看详情
+                        <span class="mdi mdi-arrow-right ml-2"></span>
+                    </a>
+                </div>
+
+                <div class="card animate-fade-in delay-100">
+                    <span class="mdi mdi-battery-charging text-4xl text-secondary-light dark:text-secondary-dark mb-4"></span>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">充电桩管理</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">监控充电桩状态，管理充电设备。</p>
+                    <a href="charging.html" class="btn-primary inline-block">
+                        查看详情
+                        <span class="mdi mdi-arrow-right ml-2"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/pages/admin.js"></script>
+</body>
+</html> 

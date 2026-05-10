@@ -1,0 +1,130 @@
+<!-- public/orders.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单管理</title>
+    <link rel="stylesheet" href="styles/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- 侧边栏 -->
+        <div class="w-48 bg-white shadow-lg">
+            <div class="p-4 border-b border-gray-200">
+                <h1 class="text-xl font-bold text-gray-800">管理系统</h1>
+            </div>
+            <nav class="mt-4 px-2">
+                <div class="space-y-2">
+                    <a href="admin.html" class="sidebar-link block">
+                        <span class="mdi mdi-home text-xl"></span>
+                        <span class="ml-3">主页</span>
+                    </a>
+                    <a href="balance.html" class="sidebar-link block">
+                        <span class="mdi mdi-wallet text-xl"></span>
+                        <span class="ml-3">余额管理</span>
+                    </a>
+                    <a href="charging.html" class="sidebar-link block">
+                        <span class="mdi mdi-battery-charging text-xl"></span>
+                        <span class="ml-3">继电器管理</span>
+                    </a>
+                    <a href="Controlcentre.html" class="sidebar-link block">
+                        <span class="mdi mdi-cog-transfer text-xl"></span>
+                        <span class="ml-3">调控中心</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-link block">
+                        <span class="mdi mdi-cash-register text-xl"></span>
+                        <span class="ml-3">订单管理</span>
+                    </a>
+                    <a href="phoneNumbersLog.html" class="sidebar-link block">
+                        <span class="mdi mdi-file-document-outline text-xl"></span>
+                        <span class="ml-3">日志</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 主要内容区 -->
+        <div class="content-container">
+            <div class="mb-8">
+                <h2 class="page-title">订单管理</h2>
+                <p class="page-description">您可以通过手机号或订单号查询订单信息</p>
+            </div>
+
+            <!-- 搜索区域 -->
+            <div class="card">
+                <div class="space-y-4">
+                    <!-- 查询方式选择 -->
+                    <div class="flex space-x-4 mb-4">
+                        <button id="phoneSearchBtn" onclick="switchSearchMode('phone')" 
+                            class="search-btn search-btn-active">
+                            按手机号查询
+                        </button>
+                        <button id="orderSearchBtn" onclick="switchSearchMode('order')" 
+                            class="search-btn search-btn-inactive">
+                            按订单号查询
+                        </button>
+                    </div>
+
+                    <!-- 手机号查询表单 -->
+                    <div id="phoneSearchForm">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">手机号</label>
+                            <input type="text" id="phoneNumber" class="form-input" placeholder="请输入手机号">
+                        </div>
+                    </div>
+
+                    <!-- 订单号查询表单 -->
+                    <div id="orderSearchForm" class="hidden">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">订单号</label>
+                            <input type="text" id="orderNo" class="form-input" placeholder="请输入订单号">
+                        </div>
+                    </div>
+
+                    <!-- 操作按钮 -->
+                    <div class="flex space-x-4">
+                        <button onclick="searchOrders()" class="btn-primary">
+                            <span class="mdi mdi-magnify mr-2"></span>
+                            查询
+                        </button>
+                        <button onclick="resetSearch()" class="btn-secondary">
+                            <span class="mdi mdi-refresh mr-2"></span>
+                            重置
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 订单列表 -->
+            <div class="table-container">
+                <div class="overflow-x-auto">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th class="table-header">订单号</th>
+                                <th class="table-header">手机号</th>
+                                <th class="table-header">金额(元)</th>
+                                <th class="table-header">状态</th>
+                                <th class="table-header">商品描述</th>
+                                <th class="table-header">支付时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderList" class="divide-y divide-gray-200">
+                            <!-- 数据将通过 JavaScript 动态插入 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 分页 -->
+            <div class="mt-6 flex justify-center" id="pagination">
+                <!-- 分页按钮将通过 JavaScript 动态插入 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/pages/orders.js"></script>
+</body>
+</html>

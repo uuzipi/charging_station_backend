@@ -1,0 +1,52 @@
+/* 内容样式 start */
+.content {
+    padding: 20px;
+}
+/* 内容样式 end */
+
+/* 卡片样式 start */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+/* 卡片样式 end */
+
+/* 按钮样式 start */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+/* 按钮样式 end */
+
+/* 充电桩样式 start */
+.charger {
+    margin-bottom: 20px;
+}
+
+.charger h3 {
+    margin-top: 0;
+}
+
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60px;
+    outline: none;
+}
+/* 充电桩样式 end */ 

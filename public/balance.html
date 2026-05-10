@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>余额管理 - 管理系统</title>
+    <link rel="stylesheet" href="styles/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- 侧边栏 -->
+        <div class="w-48 bg-white shadow-lg">
+            <div class="p-4 border-b border-gray-200">
+                <h1 class="text-xl font-bold text-gray-800">管理系统</h1>
+            </div>
+            <nav class="mt-4 px-2">
+                <div class="space-y-2">
+                    <a href="admin.html" class="sidebar-link block">
+                        <span class="mdi mdi-home text-xl"></span>
+                        <span class="ml-3">主页</span>
+                    </a>
+                    <a href="balance.html" class="sidebar-link block">
+                        <span class="mdi mdi-wallet text-xl"></span>
+                        <span class="ml-3">余额管理</span>
+                    </a>
+                    <a href="charging.html" class="sidebar-link block">
+                        <span class="mdi mdi-battery-charging text-xl"></span>
+                        <span class="ml-3">继电器管理</span>
+                    </a>
+                    <a href="Controlcentre.html" class="sidebar-link block">
+                        <span class="mdi mdi-cog-transfer text-xl"></span>  <!-- 带齿轮的控制台图标 -->
+                        <span class="ml-3">调控中心</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-link block">
+                        <span class="mdi mdi-cash-register text-xl"></span>
+                        <span class="ml-3">订单管理</span>
+                    </a>
+                    <a href="phoneNumbersLog.html" class="sidebar-link block">
+                        <span class="mdi mdi-file-document-outline text-xl"></span>
+                        <span class="ml-3">日志</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 主要内容区 -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">余额管理</h2>
+            </div>
+
+            <!-- 功能切换按钮 -->
+            <div class="mb-6">
+                <div class="flex space-x-4">
+                    <button onclick="showBalance()" class="tab-button active">
+                        <span class="mdi mdi-wallet-outline mr-2"></span>
+                        查询余额
+                    </button>
+                    <button onclick="showUserBalances()" class="tab-button">
+                        <span class="mdi mdi-account-group-outline mr-2"></span>
+                        用户余额列表
+                    </button>
+                </div>
+            </div>
+
+            <!-- 余额查询面板 -->
+            <div id="balanceContainer" class="card max-w-md absolute top-40 left-150">
+                <!-- 图标和标题 -->
+                <div class="text-left mb-8 pl-10">
+                    <div class="flex items-center gap-4">
+                        <span class="mdi mdi-wallet text-6xl text-primary-light"></span>
+                        <h3 class="text-2xl font-bold text-gray-800">查询余额</h3>
+                    </div>
+                </div>
+            
+                <!-- 输入框和按钮 -->
+                <div class="pl-10">
+                    <div class="flex gap-4 mb-6">
+                        <input type="text" id="phoneNumber" placeholder="请输入手机号" class="input flex-1">
+                        <button onclick="refreshBalance()" class="btn-primary">
+                            <span class="mdi mdi-refresh mr-2"></span>
+                            查询
+                        </button>
+                    </div>
+                    <!-- 余额显示 -->
+                    <div id="balanceDisplay" class="text-left text-3xl font-bold text-primary-light">
+                        ¥ --
+                    </div>
+                </div>
+            </div>
+
+            <!-- 用户余额列表面板 -->
+            <div id="userBalanceContainer" class="card hidden">
+                <div class="text-center mb-8">
+                    <span class="mdi mdi-account-group text-6xl text-primary-light"></span>
+                    <h3 class="text-2xl font-bold text-gray-800 mt-4">用户余额列表</h3>
+                </div>
+                <ul id="userBalanceList" class="space-y-2">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/pages/balance.js"></script>
+</body>
+</html> 

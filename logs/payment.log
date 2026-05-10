@@ -1,0 +1,76 @@
+2025-03-04 14:32:52.187 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sortField":"payTime","sortOrder":"desc"}}
+2025-03-04 14:32:52.188 [error]: 查询订单失败 {"error":"读取订单文件失败: Unexpected end of JSON input","stack":"Error: 读取订单文件失败: Unexpected end of JSON input\n    at queryOrder (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\4. Database\\src\\routes\\wxpay.js:314:23)"}
+2025-03-04 14:54:36.542 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:36.544 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:36.544 [info]: 按支付时间降序排序
+2025-03-04 14:54:36.545 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
+2025-03-04 14:54:40.045 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:40.046 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:40.047 [info]: 按支付时间降序排序
+2025-03-04 14:54:40.047 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
+2025-03-04 14:54:40.924 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:40.925 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:40.925 [info]: 按支付时间降序排序
+2025-03-04 14:54:40.926 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"},"total":24,"page":3,"limit":10}
+2025-03-04 14:54:43.004 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:43.005 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:43.005 [info]: 按支付时间降序排序
+2025-03-04 14:54:43.006 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
+2025-03-04 14:54:44.633 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:44.634 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:44.635 [info]: 按支付时间降序排序
+2025-03-04 14:54:44.635 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
+2025-03-04 14:54:47.110 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:47.110 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:47.111 [info]: 按支付时间降序排序
+2025-03-04 14:54:47.111 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
+2025-03-04 14:54:48.047 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:48.048 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:48.048 [info]: 按支付时间降序排序
+2025-03-04 14:54:48.049 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"},"total":24,"page":3,"limit":10}
+2025-03-04 14:54:49.377 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:49.379 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:49.379 [info]: 按支付时间降序排序
+2025-03-04 14:54:49.379 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
+2025-03-04 14:54:51.487 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:54:51.488 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:54:51.488 [info]: 按支付时间降序排序
+2025-03-04 14:54:51.489 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
+2025-03-04 14:56:04.793 [info]: 收到查询订单请求 {"query":{"orderNo":"15961844912_1741009918551_81367","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:56:04.795 [info]: 按订单号过滤 {"orderNo":"15961844912_1741009918551_81367","resultCount":1}
+2025-03-04 14:56:04.795 [info]: 按支付时间降序排序
+2025-03-04 14:56:04.796 [info]: 订单查询成功 {"query":{"orderNo":"15961844912_1741009918551_81367","page":"1","limit":"10","sort":"-payTime"},"total":1,"page":1,"limit":10}
+2025-03-04 14:56:10.751 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:56:10.752 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
+2025-03-04 14:56:10.753 [info]: 按支付时间降序排序
+2025-03-04 14:56:10.754 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
+2025-03-04 14:56:14.984 [info]: 收到查询订单请求 {"query":{"orderNo":"15961844912_1741068069291_92853","page":"1","limit":"10","sort":"-payTime"}}
+2025-03-04 14:56:14.984 [info]: 按订单号过滤 {"orderNo":"15961844912_1741068069291_92853","resultCount":1}
+2025-03-04 14:56:14.985 [info]: 按支付时间降序排序
+2025-03-04 14:56:14.985 [info]: 订单查询成功 {"query":{"orderNo":"15961844912_1741068069291_92853","page":"1","limit":"10","sort":"-payTime"},"total":1,"page":1,"limit":10}
+2025-03-07 18:48:12.294 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741344491970_12345","orderId":"67caceec2e94b2840f76c80c"}
+2025-03-07 18:54:18.350 [error]: 保存微信支付订单信息失败 {"error":"未找到手机号为 13800138006 的用户","stack":"Error: 未找到手机号为 13800138006 的用户\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:20:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
+2025-03-07 18:54:19.183 [error]: 保存微信支付订单信息失败 {"error":"未找到手机号为 13800138006 的用户","stack":"Error: 未找到手机号为 13800138006 的用户\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:20:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
+2025-03-07 18:54:26.393 [error]: 保存微信支付订单信息失败 {"error":"未找到手机号为 13800138006 的用户","stack":"Error: 未找到手机号为 13800138006 的用户\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:20:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
+2025-03-07 18:59:56.358 [info]: 用户 13800138006 不存在，正在创建新用户
+2025-03-07 18:59:56.575 [info]: 创建新用户成功 {"phoneNumber":"13800138006","userId":"67cad1acea34a3f88a60212e"}
+2025-03-07 18:59:56.791 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741345196249_12345","orderId":"67cad1acea34a3f88a60212f"}
+2025-03-07 19:04:23.858 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741345463501_12345","orderId":"67cad2b77a37e8a09d57d742"}
+2025-03-07 19:05:39.329 [info]: 用户 13800138007 不存在，正在创建新用户
+2025-03-07 19:05:39.549 [info]: 创建新用户成功 {"phoneNumber":"13800138007","balance":0,"userId":"67cad303f4517b4970cb8fdc"}
+2025-03-07 19:05:39.764 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741345539185_12345","orderId":"67cad303f4517b4970cb8fdd"}
+2025-03-07 19:11:01.861 [error]: 保存微信支付订单信息失败 {"error":"amountInYuan is not defined","stack":"ReferenceError: amountInYuan is not defined\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:76:54)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
+2025-03-07 19:12:05.838 [info]: 用户 13800138007 余额已更新 {"oldBalance":0,"addAmount":100,"newBalance":100}
+2025-03-07 19:12:06.048 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741345925613_12345","orderId":"67cad4858052737c0a96be3c"}
+2025-03-07 19:13:35.467 [info]: 用户 13800138007 余额已更新 {"oldBalance":100,"addAmount":1,"newBalance":101}
+2025-03-07 19:13:35.683 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741346015246_12345","orderId":"67cad4dff88961b2c4aa920f"}
+2025-03-07 19:13:59.606 [info]: 用户 13800138007 余额已更新 {"oldBalance":101,"addAmount":1,"newBalance":102}
+2025-03-07 19:13:59.821 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741346039392_12345","orderId":"67cad4f7f88961b2c4aa9210"}
+2025-03-07 19:14:58.390 [info]: 用户 13800138008 不存在，正在创建新用户
+2025-03-07 19:14:58.613 [info]: 创建新用户成功 {"phoneNumber":"13800138008","balance":2,"userId":"67cad53267bc88619719505c"}
+2025-03-07 19:14:58.836 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741346098279_12345","orderId":"67cad53267bc88619719505d"}
+2025-03-07 19:40:21.231 [info]: 用户 13800138000 余额已更新 {"oldBalance":100,"addAmount":1,"newBalance":99}
+2025-03-07 19:40:22.791 [info]: 用户 13800138000 余额已更新 {"oldBalance":99,"addAmount":1,"newBalance":98}
+2025-03-07 19:43:28.341 [info]: 用户 13800138000 余额已更新 {"oldBalance":98,"addAmount":1,"newBalance":97}
+2025-03-07 19:46:22.639 [info]: 用户 13800138000 余额已更新 {"oldBalance":97,"subtractAmount":1,"newBalance":96}
+2025-04-26 14:24:22.028 [info]: 预创建订单成功 {"orderNo":"8df2452755fd31be6f56b4fd2bd5893a","phoneNumber":"15961844912","orderId":"680c7c15c3544dd0f62612ca"}

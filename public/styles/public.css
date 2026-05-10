@@ -1,0 +1,68 @@
+/* 全局样式 start */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* 全局样式 end */
+
+/* 导航栏样式 start */
+.sidebar {
+    background-color: #f0f0f0;
+    width: 110px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    position: relative; /* 为伪元素定位做准备 */
+    text-decoration: none; /* 移除默认下划线 */
+    color: #333;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 16px; /* 默认文字大小 */
+}
+
+/* 根据文字大小动态调整下划线 */
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.2em; /* 下划线距离文字的间距（相对于文字大小） */
+    width: 0;
+    height: 0.1em; /* 下划线高度（相对于文字大小） */
+    background-color: #ccc; /* 浅灰色下划线 */
+    transition: width 0.3s ease; /* 添加动画效果 */
+}
+
+/* 悬停或选中时显示完整下划线 */
+.sidebar a:hover::after,
+.sidebar a.active::after {
+    width: 100%; /* 悬停或选中时显示完整下划线 */
+}
+/* 导航栏样式 end */
+
+/* 主内容样式 start */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+/* 主内容样式 end */
+
+/* 头部样式 start */
+.header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* 头部样式 end */ 

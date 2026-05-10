@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh" class="dark-transition">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>管理系统</title>
+        <link rel="stylesheet" href="styles/tailwind.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    </head>
+    <body class="bg-gray-50">
+        <div class="min-h-screen flex">
+            <!-- 侧边栏 -->
+            <div class="w-48 bg-white shadow-lg">
+                <div class="p-4 border-b border-gray-200">
+                    <h1 class="text-xl font-bold text-gray-800">管理系统</h1>
+                </div>
+                <nav class="mt-4 px-2">
+                    <div class="space-y-2">
+                        <a href="admin.html" class="sidebar-link block">
+                            <span class="mdi mdi-home text-xl"></span>
+                            <span class="ml-3">主页</span>
+                        </a>
+                        <a href="balance.html" class="sidebar-link block">
+                            <span class="mdi mdi-wallet text-xl"></span>
+                            <span class="ml-3">余额管理</span>
+                        </a>
+                        <a href="charging.html" class="sidebar-link block">
+                            <span class="mdi mdi-battery-charging text-xl"></span>
+                            <span class="ml-3">继电器管理</span>
+                        </a>
+                        <a href="Controlcentre.html" class="sidebar-link block">
+                            <span class="mdi mdi-cog-transfer text-xl"></span>
+                            <span class="ml-3">调控中心</span>
+                        </a>
+                        <a href="orders.html" class="sidebar-link block">
+                            <span class="mdi mdi-cash-register text-xl"></span>
+                            <span class="ml-3">订单管理</span>
+                        </a>
+                        <a href="phoneNumbersLog.html" class="sidebar-link block">
+                            <span class="mdi mdi-file-document-outline text-xl"></span>
+                            <span class="ml-3">日志</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- 主要内容区 -->
+            <div class="flex-1 p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="flex items-center gap-4">
+                        <span class="mdi mdi-battery-charging text-4xl text-primary-light"></span>
+                        <h2 class="text-3xl font-bold text-gray-800">调控中心</h2>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white p-3 rounded-lg shadow-md mr-3">
+                            <span class="mdi mdi-battery-charging text-xl text-primary-light"></span>
+                            <select id="stationSelector" class="text-gray-700 font-medium focus:outline-none bg-transparent border-none">
+                                <option value="01">充电站 01</option>
+                                <option value="02">充电站 02</option>
+                                <option value="03">充电站 03</option>
+                                <option value="04">充电站 04</option>
+                                <option value="05">充电站 05</option>
+                                <option value="06">充电站 06</option>
+                                <option value="07">充电站 07</option>
+                                <option value="08">充电站 08</option>
+                                <option value="09">充电站 09</option>
+                                <option value="10">充电站 10</option>
+                            </select>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-md">
+                            <span class="mdi mdi-power-plug text-xl text-primary-light"></span>
+                            <select id="portSelector" class="text-gray-700 font-medium focus:outline-none bg-transparent border-none">
+                                <option value="01">充电口 01</option>
+                                <option value="02">充电口 02</option>
+                                <option value="03">充电口 03</option>
+                                <option value="04">充电口 04</option>
+                                <option value="05">充电口 05</option>
+                                <option value="06">充电口 06</option>
+                                <option value="07">充电口 07</option>
+                                <option value="08">充电口 08</option>
+                                <option value="09">充电口 09</option>
+                                <option value="10">充电口 10</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 环境数据显示面板 -->
+                <div class="flex gap-4 mb-8">
+                    <!-- 温度面板 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="mdi mdi-thermometer text-2xl text-red-500"></span>
+                            <h3 class="text-sm font-bold text-gray-800">温度</h3>
+                        </div>
+                        <div id="temperatureDisplay" class="text-xl font-bold text-red-500">
+                            -- °C
+                        </div>
+                    </div>
+
+                    <!-- 湿度面板 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="mdi mdi-water text-2xl text-blue-500"></span>
+                            <h3 class="text-sm font-bold text-gray-800">湿度</h3>
+                        </div>
+                        <div id="humidityDisplay" class="text-xl font-bold text-blue-500">
+                            -- %
+                        </div>
+                    </div>
+
+                    <!-- 功率面板 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="mdi mdi-lightning-bolt text-2xl text-green-500"></span>
+                            <h3 class="text-sm font-bold text-gray-800">功率</h3>
+                        </div>
+                        <div id="powerDisplay" class="text-xl font-bold text-green-500">
+                            -- W
+                        </div>
+                    </div>
+
+                    <!-- 电流面板 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="mdi mdi-current-ac text-2xl text-yellow-500"></span>
+                            <h3 class="text-sm font-bold text-gray-800">电流</h3>
+                        </div>
+                        <div id="currentDisplay" class="text-xl font-bold text-yellow-500">
+                            -- A
+                        </div>
+                    </div>
+
+                    <!-- 电压面板 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="mdi mdi-flash text-2xl text-purple-500"></span>
+                            <h3 class="text-sm font-bold text-gray-800">电压</h3>
+                        </div>
+                        <div id="voltageDisplay" class="text-xl font-bold text-purple-500">
+                            -- V
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 消息显示面板 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="mdi mdi-message-text text-4xl text-primary-light"></span>
+                        <h3 class="text-2xl font-bold text-gray-800">实时消息</h3>
+                    </div>
+                    <div id="messageContainer" class="space-y-4 max-h-96 overflow-y-auto bg-gray-50 p-4 rounded-lg">
+                        <!-- 消息将在这里动态添加 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="scripts/pages/controlcentre.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
