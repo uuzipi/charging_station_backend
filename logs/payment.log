@@ -1,53 +1,4 @@
-2025-03-04 14:32:52.187 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sortField":"payTime","sortOrder":"desc"}}
 2025-03-04 14:32:52.188 [error]: 查询订单失败 {"error":"读取订单文件失败: Unexpected end of JSON input","stack":"Error: 读取订单文件失败: Unexpected end of JSON input\n    at queryOrder (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\4. Database\\src\\routes\\wxpay.js:314:23)"}
-2025-03-04 14:54:36.542 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:36.544 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:36.544 [info]: 按支付时间降序排序
-2025-03-04 14:54:36.545 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
-2025-03-04 14:54:40.045 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:40.046 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:40.047 [info]: 按支付时间降序排序
-2025-03-04 14:54:40.047 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
-2025-03-04 14:54:40.924 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:40.925 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:40.925 [info]: 按支付时间降序排序
-2025-03-04 14:54:40.926 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"},"total":24,"page":3,"limit":10}
-2025-03-04 14:54:43.004 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:43.005 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:43.005 [info]: 按支付时间降序排序
-2025-03-04 14:54:43.006 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
-2025-03-04 14:54:44.633 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:44.634 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:44.635 [info]: 按支付时间降序排序
-2025-03-04 14:54:44.635 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
-2025-03-04 14:54:47.110 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:47.110 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:47.111 [info]: 按支付时间降序排序
-2025-03-04 14:54:47.111 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
-2025-03-04 14:54:48.047 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:48.048 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:48.048 [info]: 按支付时间降序排序
-2025-03-04 14:54:48.049 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"3","limit":"10","sort":"-payTime"},"total":24,"page":3,"limit":10}
-2025-03-04 14:54:49.377 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:49.379 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:49.379 [info]: 按支付时间降序排序
-2025-03-04 14:54:49.379 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"2","limit":"10","sort":"-payTime"},"total":24,"page":2,"limit":10}
-2025-03-04 14:54:51.487 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:54:51.488 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:54:51.488 [info]: 按支付时间降序排序
-2025-03-04 14:54:51.489 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
-2025-03-04 14:56:04.793 [info]: 收到查询订单请求 {"query":{"orderNo":"15961844912_1741009918551_81367","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:56:04.795 [info]: 按订单号过滤 {"orderNo":"15961844912_1741009918551_81367","resultCount":1}
-2025-03-04 14:56:04.795 [info]: 按支付时间降序排序
-2025-03-04 14:56:04.796 [info]: 订单查询成功 {"query":{"orderNo":"15961844912_1741009918551_81367","page":"1","limit":"10","sort":"-payTime"},"total":1,"page":1,"limit":10}
-2025-03-04 14:56:10.751 [info]: 收到查询订单请求 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:56:10.752 [info]: 按手机号过滤 {"phoneNumber":"15961844912","resultCount":24}
-2025-03-04 14:56:10.753 [info]: 按支付时间降序排序
-2025-03-04 14:56:10.754 [info]: 订单查询成功 {"query":{"phoneNumber":"15961844912","page":"1","limit":"10","sort":"-payTime"},"total":24,"page":1,"limit":10}
-2025-03-04 14:56:14.984 [info]: 收到查询订单请求 {"query":{"orderNo":"15961844912_1741068069291_92853","page":"1","limit":"10","sort":"-payTime"}}
-2025-03-04 14:56:14.984 [info]: 按订单号过滤 {"orderNo":"15961844912_1741068069291_92853","resultCount":1}
-2025-03-04 14:56:14.985 [info]: 按支付时间降序排序
-2025-03-04 14:56:14.985 [info]: 订单查询成功 {"query":{"orderNo":"15961844912_1741068069291_92853","page":"1","limit":"10","sort":"-payTime"},"total":1,"page":1,"limit":10}
 2025-03-07 18:48:12.294 [info]: 创建新微信支付订单信息成功 {"orderNo":"13800138000_1741344491970_12345","orderId":"67caceec2e94b2840f76c80c"}
 2025-03-07 18:54:18.350 [error]: 保存微信支付订单信息失败 {"error":"未找到手机号为 13800138006 的用户","stack":"Error: 未找到手机号为 13800138006 的用户\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:20:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
 2025-03-07 18:54:19.183 [error]: 保存微信支付订单信息失败 {"error":"未找到手机号为 13800138006 的用户","stack":"Error: 未找到手机号为 13800138006 的用户\n    at Object.saveVxPaymentData (C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\src\\db\\vxpayOrderDB.js:20:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Administrator\\Desktop\\3.1BackRenew\\6. Database\\server.js:355:24"}
@@ -73,4 +24,4 @@
 2025-03-07 19:40:22.791 [info]: 用户 13800138000 余额已更新 {"oldBalance":99,"addAmount":1,"newBalance":98}
 2025-03-07 19:43:28.341 [info]: 用户 13800138000 余额已更新 {"oldBalance":98,"addAmount":1,"newBalance":97}
 2025-03-07 19:46:22.639 [info]: 用户 13800138000 余额已更新 {"oldBalance":97,"subtractAmount":1,"newBalance":96}
-2025-04-26 14:24:22.028 [info]: 预创建订单成功 {"orderNo":"8df2452755fd31be6f56b4fd2bd5893a","phoneNumber":"15961844912","orderId":"680c7c15c3544dd0f62612ca"}
+2025-04-26 14:24:22.028 [info]: 预创建订单成功 {"orderNo":"8df2452755fd31be6f56b4fd2bd5893a","orderId":"680c7c15c3544dd0f62612ca"}

@@ -6,18 +6,23 @@ const router = express.Router();
 const crypto = require('crypto');
 const { businessLogger } = require('../utils/logger');
 const userDB = require('../db/userDB');
-const WxPay = require('wechatpay-node-v3');
-const config = require('../config/wxpay.config');
 
-
-// 微信支付实例，用于调用签名方法
-const wxpay = new WxPay({
-    appid: config.appId,
-    mchid: config.mchId,
-    publicKey: config.publicKey,
-    privateKey: config.privateKey,
-    secretKey: config.apiV3Key,
-});
+// WxPay 延迟初始化，首次调用时才创建实例
+// 只有在 src/config/wxpay.config.js 中填入真实密钥后才能正常使用微信支付
+let wxpayInstance = null;
+function getWxPay() {
+    if (wxpayInstance) return wxpayInstance;
+    const WxPay = require('wechatpay-node-v3');
+    const config = require('../config/wxpay.config');
+    wxpayInstance = new WxPay({
+        appid: config.appId,
+        mchid: config.mchId,
+        publicKey: config.publicKey,
+        privateKey: config.privateKey,
+        secretKey: config.apiV3Key,
+    });
+    return wxpayInstance;
+}
 
 /**
  * 解密微信获取的手机号

@@ -112,9 +112,9 @@ const balanceRoutes = require('./src/routes/balanceRoutes');
 const chargingRoutes = require('./src/routes/chargingRoutes');
 const mqttRoutes = require('./src/routes/mqttRoutes');
 const pageRoutes = require('./src/routes/pageRoutes');
-const phoneNumberRoute = require('./src/routes/phoneNumberRoute');
+const phoneNumberRoute = require('./src/routes/phoneNumberRoute'); // 手机号登录/解密（微信支付模块，需要密钥）
 const qrPaymentRoute = require('./src/routes/qrPaymentRoute');
-const wxpay = require('./src/functions/wxpay.js'); // 引入wxpay模块(这个在functions里,没有用routes)
+// const wxpay = require('./src/functions/wxpay.js'); // 引入wxpay模块(微信支付，需要填入真实密钥才能启用)
 
 // 使用路由
 app.use('/api', orderRoutes);
@@ -125,11 +125,11 @@ app.use('/', pageRoutes);
 app.use('/api/phone', phoneNumberRoute);
 app.use('/api/qrpayment', qrPaymentRoute);
 
-// 微信支付相关路由 - 单独配置各个端点(微信支付的逻辑是直接写到函数里的)
-app.post('/api/wxpay/create', wxpay.createPayment);  // 创建支付
-app.post('/api/wxpay/notify', wxpay.paymentNotify);  // 支付回调
-app.get('/api/wxpay/openid', wxpay.getOpenid);      // 获取openid
-app.get('/api/wxpay/successful-orders-by-phone', wxpay.querySuccessfulOrdersByPhone); // 查询指定手机号的成功微信支付订单
+// 微信支付相关路由 - 需要先在 src/config/wxpay.config.js 中填入真实密钥，再取消注释下方代码
+// app.post('/api/wxpay/create', wxpay.createPayment);  // 创建支付
+// app.post('/api/wxpay/notify', wxpay.paymentNotify);  // 支付回调
+// app.get('/api/wxpay/openid', wxpay.getOpenid);      // 获取openid
+// app.get('/api/wxpay/successful-orders-by-phone', wxpay.querySuccessfulOrdersByPhone); // 查询成功订单
 
 // 错误处理中间件
 app.use((err, req, res, next) => {

@@ -1,16 +1,23 @@
-const WxPay = require('wechatpay-node-v3');
-const config = require('../config/wxpay.config');
+// WxPay 延迟初始化，首次调用时才创建实例
+// 只有在 src/config/wxpay.config.js 中填入真实密钥后才能正常使用微信支付
+let wxpayInstance = null;
+function getWxPay() {
+    if (wxpayInstance) return wxpayInstance;
+    const WxPay = require('wechatpay-node-v3');
+    const config = require('../config/wxpay.config');
+    wxpayInstance = new WxPay({
+        appid: config.appId,
+        mchid: config.mchId,
+        publicKey: config.publicKey,
+        privateKey: config.privateKey,
+        secretKey: config.apiV3Key,
+    });
+    return wxpayInstance;
+}
+
 const { businessLogger, paymentLogger } = require('../utils/logger');
 const https = require('https');
 const vxpayOrderDB = require('../db/vxpayOrderDB');
-
-const wxpay = new WxPay({
-    appid: config.appId,
-    mchid: config.mchId,
-    publicKey: config.publicKey,
-    privateKey: config.privateKey,
-    secretKey: config.apiV3Key,
-});
 /*
 期望参数
 {
@@ -84,7 +91,7 @@ const createPayment = async (req, res) => {
 
         paymentLogger.info('调用transactions_jsapi前的参数', { payParams });
         //微信官方的统一下单接口
-        const result = await wxpay.transactions_jsapi(payParams);
+        const result = await getWxPay().transactions_jsapi(payParams);
         paymentLogger.info('transactions_jsapi返回完整结果', { result });
 
         if (!result || result.status !== 200) {
@@ -104,7 +111,7 @@ const createPayment = async (req, res) => {
         const nonceStr = Math.random().toString(36).slice(2, 15);
         const timeStamp = Math.floor(Date.now() / 1000).toString();
         const message = `${config.appId}\n${timeStamp}\n${nonceStr}\nprepay_id=${prepay_id}\n`;
-        const paySign = wxpay.sign(message);
+        const paySign = getWxPay().sign(message);
 
         const paymentData = {
             appId: config.appId,
@@ -148,7 +155,7 @@ const paymentNotify = async (req, res) => {
             'Wechatpay-Serial': req.headers['wechatpay-serial'],
         };
 
-        const result = await wxpay.decipher_gcm(
+        const result = await getWxPay().decipher_gcm(
             rawData.resource.ciphertext,
             rawData.resource.associated_data,
             rawData.resource.nonce,

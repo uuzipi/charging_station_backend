@@ -232,3 +232,4 @@
 2025-04-26 14:24:22.029 [info]: 生成订单号 {"out_trade_no":"8df2452755fd31be6f56b4fd2bd5893a","phoneNumber":"15961844912"}
 2026-02-02 10:18:26.022 [error]: 读取用户余额失败 {"error":"querySrv ENOTFOUND _mongodb._tcp.cluster0.3ylz4.mongodb.net"}
 2026-02-02 10:18:56.650 [error]: 读取用户余额失败 {"error":"querySrv ENOTFOUND _mongodb._tcp.cluster0.3ylz4.mongodb.net"}
+2026-05-10 22:04:50.394 [error]: 读取用户余额失败 {"error":"Cannot read properties of undefined (reading 'db')"}

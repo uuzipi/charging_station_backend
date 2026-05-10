@@ -1,20 +1,26 @@
 const express = require('express');
 const router = express.Router();
-const WxPay = require('wechatpay-node-v3');
-const config = require('../config/wxpay.config');
 const { businessLogger, paymentLogger } = require('../utils/logger');
 const vxpayOrderDB = require('../db/vxpayOrderDB');
 const crypto = require('crypto');
 const QRCode = require('qrcode');
 
-// 微信支付实例
-const wxpay = new WxPay({
-    appid: config.appId,
-    mchid: config.mchId,
-    publicKey: config.publicKey,
-    privateKey: config.privateKey,
-    secretKey: config.apiV3Key,
-});
+// WxPay 延迟初始化，首次调用时才创建实例
+// 只有在 src/config/wxpay.config.js 中填入真实密钥后才能正常使用微信支付
+let wxpayInstance = null;
+function getWxPay() {
+    if (wxpayInstance) return wxpayInstance;
+    const WxPay = require('wechatpay-node-v3');
+    const config = require('../config/wxpay.config');
+    wxpayInstance = new WxPay({
+        appid: config.appId,
+        mchid: config.mchId,
+        publicKey: config.publicKey,
+        privateKey: config.privateKey,
+        secretKey: config.apiV3Key,
+    });
+    return wxpayInstance;
+}
 
 /**
  * 生成二维码支付页面
@@ -431,7 +437,7 @@ router.post('/create', async (req, res) => {
         };
         
         // 调用微信支付API生成支付二维码
-        const result = await wxpay.transactions_native(payParams);
+        const result = await getWxPay().transactions_native(payParams);
         
         if (!result || result.status !== 200) {
             throw new Error(result?.message || '创建支付二维码失败');

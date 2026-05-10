@@ -13423,3 +13423,11 @@
 2026-05-10 12:36:25.277 [info]: GET /is-connected 304 - - 0.207 ms
 2026-05-10 12:37:24.967 [info]: GET /is-connected 304 - - 0.373 ms
 2026-05-10 12:38:25.282 [info]: GET /is-connected 304 - - 0.249 ms
+2026-05-10 22:04:27.352 [info]: GET /is-connected 304 - - 5.320 ms
+2026-05-10 22:04:27.484 [info]: GET /favicon.ico 404 150 - 1.943 ms
+2026-05-10 22:04:31.969 [info]: GET /run-script 200 2216 - 165.491 ms
+2026-05-10 22:04:32.753 [info]: GET /is-connected 304 - - 0.459 ms
+2026-05-10 22:04:34.040 [info]: GET /run-script 304 - - 110.577 ms
+2026-05-10 22:04:46.367 [info]: GET /is-connected 304 - - 0.662 ms
+2026-05-10 22:04:50.396 [info]: GET /user-balances 500 55 - 4.001 ms
+2026-05-10 22:04:52.995 [info]: GET /run-script 304 - - 143.782 ms
